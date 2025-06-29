@@ -46,13 +46,7 @@ Postman, Insomnia, or curl for API testing
 
 📌 API Endpoints
 Method	Endpoint	Description	Auth Required
-GET	/api/products	Get all products (supports filtering/paging)	❌
-GET	/api/products/:id	Get product by ID	❌
-POST	/api/products	Create new product	✅
-PUT	/api/products/:id	Update product by ID	✅
-DELETE	/api/products/:id	Delete product by ID	✅
-GET	/api/products/search?q=term	Search products by name	❌
-GET	/api/products/stats	Get count of products by category	❌
+
 
 🔐 Authentication
 For POST, PUT, and DELETE requests, you must include the following header:
