@@ -31,30 +31,41 @@ Run the server:
 
 npm start
 📁 Project Files
+
 server.js – Main server with all API routes and middleware
+
 
 .env.example – Example environment variables
 
+
 README.md – Project documentation
+
 
 Week2-Assignment.md – Assignment instructions
 
 🔧 Requirements
+
 Node.js v18+
 
 Postman, Insomnia, or curl for API testing
 
+
 📌 API Endpoints
+
 Method	Endpoint	Description	Auth Required
 
 
 🔐 Authentication
+
 For POST, PUT, and DELETE requests, you must include the following header:
 
 
 x-api-key: mysecretkey
+
 📦 Example Requests & Responses
+
 ✅ Create Product – POST /api/products
+
 Headers:
 
 
