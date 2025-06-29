@@ -145,8 +145,11 @@ Before pushing your final submission to GitHub:
  Push your final changes:
 
 git add .
+
 git commit -m "Final submission - Express.js assignment"
+
 git push origin main
+
 📚 Resources
 
 - [Express.js Documentation](https://expressjs.com/)
