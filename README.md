@@ -47,6 +47,112 @@ The API will have the following endpoints:
 - `PUT /api/products/:id`: Update a product
 - `DELETE /api/products/:id`: Delete a product
 
+
+
+## API Endpoints
+
+The API will have the following endpoints:
+
+- `GET /api/products`: Get all products (with optional filtering and pagination)
+- `GET /api/products/:id`: Get a specific product
+- `POST /api/products`: Create a new product (requires `x-api-key` header)
+- `PUT /api/products/:id`: Update a product (requires `x-api-key` header)
+- `DELETE /api/products/:id`: Delete a product (requires `x-api-key` header)
+- `GET /api/products/search?q=term`: Search products by name
+- `GET /api/products/stats`: Get product count by category
+
+---
+
+### 🔐 Authentication
+Some routes require an API key header:
+
+x-api-key: mysecretkey
+
+
+
+---
+
+### 📌 Example Endpoints to Test
+
+- **GET all products:**  
+  `GET http://localhost:3000/api/products`
+
+- **GET filtered + paginated:**  
+  `GET http://localhost:3000/api/products?category=electronics&page=1&limit=1`
+
+- **Search products:**  
+  `GET http://localhost:3000/api/products/search?q=laptop`
+
+- **Get stats:**  
+  `GET http://localhost:3000/api/products/stats`
+
+- **Create a product:**  
+  `POST http://localhost:3000/api/products`  
+  (Headers: `x-api-key`, Body in JSON)
+
+- **Update a product:**  
+  `PUT http://localhost:3000/api/products/:id`  
+  (Headers: `x-api-key`, Body in JSON)
+
+- **Delete a product:**  
+  `DELETE http://localhost:3000/api/products/:id`  
+  (Header: `x-api-key`)
+
+---
+
+### 📚 Example Request & Response
+
+#### `POST /api/products`
+
+**Request Headers:**
+x-api-key: mysecretkey
+Content-Type: application/json
+
+
+
+**Request Body:**
+```json
+{
+  "name": "Blender",
+  "description": "Powerful kitchen blender",
+  "price": 150,
+  "category": "kitchen",
+  "inStock": true
+}
+Response:
+
+
+{
+  "id": "generated-uuid",
+  "name": "Blender",
+  "description": "Powerful kitchen blender",
+  "price": 150,
+  "category": "kitchen",
+  "inStock": true
+}
+GET /api/products/stats
+Response:
+
+
+{
+  "electronics": 2,
+  "kitchen": 1
+}
+GET /api/products/search?q=laptop
+Response:
+
+
+[
+  {
+    "id": "1",
+    "name": "Laptop",
+    "description": "High-performance laptop with 16GB RAM",
+    "price": 1200,
+    "category": "electronics",
+    "inStock": true
+  }
+]
+
 ## Submission
 
 Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
@@ -61,3 +167,5 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 - [Express.js Documentation](https://expressjs.com/)
 - [RESTful API Design Best Practices](https://restfulapi.net/)
 - [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) 
+
+
