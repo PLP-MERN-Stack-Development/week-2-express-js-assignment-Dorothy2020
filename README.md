@@ -1,117 +1,74 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19868115&assignment_repo_type=AssignmentRepo)
-# Express.js RESTful API Assignment
+🛠️ Express.js RESTful API Assignment
+This project demonstrates building a RESTful API using Express.js, with full CRUD operations, middleware, error handling, filtering, pagination, and search capabilities.
 
-This assignment focuses on building a RESTful API using Express.js, implementing proper routing, middleware, and error handling.
+📋 Assignment Overview
+In this assignment, you will:
 
-## Assignment Overview
+Set up an Express.js server
 
-You will:
-1. Set up an Express.js server
-2. Create RESTful API routes for a product resource
-3. Implement custom middleware for logging, authentication, and validation
-4. Add comprehensive error handling
-5. Develop advanced features like filtering, pagination, and search
+Create RESTful API routes for a product resource
 
-## Getting Started
+Implement custom middleware (logging, authentication, validation)
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Run the server:
-   ```
-   npm start
-   ```
+Add error handling for various scenarios
 
-## Files Included
+Implement advanced features (filtering, pagination, search, stats)
 
-- `Week2-Assignment.md`: Detailed assignment instructions
-- `server.js`: Starter Express.js server file
-- `.env.example`: Example environment variables file
+🚀 Getting Started
+Accept the GitHub Classroom assignment invitation
 
-## Requirements
-
-- Node.js (v18 or higher)
-- npm or yarn
-- Postman, Insomnia, or curl for API testing
-
-## API Endpoints
-
-The API will have the following endpoints:
-
-- `GET /api/products`: Get all products
-- `GET /api/products/:id`: Get a specific product
-- `POST /api/products`: Create a new product
-- `PUT /api/products/:id`: Update a product
-- `DELETE /api/products/:id`: Delete a product
+Clone your personal repository:
 
 
+git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+cd YOUR-REPO-NAME
+Install dependencies:
 
-## API Endpoints
 
-The API will have the following endpoints:
+npm install
+Run the server:
 
-- `GET /api/products`: Get all products (with optional filtering and pagination)
-- `GET /api/products/:id`: Get a specific product
-- `POST /api/products`: Create a new product (requires `x-api-key` header)
-- `PUT /api/products/:id`: Update a product (requires `x-api-key` header)
-- `DELETE /api/products/:id`: Delete a product (requires `x-api-key` header)
-- `GET /api/products/search?q=term`: Search products by name
-- `GET /api/products/stats`: Get product count by category
 
----
+npm start
+📁 Project Files
+server.js – Main server with all API routes and middleware
 
-### 🔐 Authentication
-Some routes require an API key header:
+.env.example – Example environment variables
+
+README.md – Project documentation
+
+Week2-Assignment.md – Assignment instructions
+
+🔧 Requirements
+Node.js v18+
+
+Postman, Insomnia, or curl for API testing
+
+📌 API Endpoints
+Method	Endpoint	Description	Auth Required
+GET	/api/products	Get all products (supports filtering/paging)	❌
+GET	/api/products/:id	Get product by ID	❌
+POST	/api/products	Create new product	✅
+PUT	/api/products/:id	Update product by ID	✅
+DELETE	/api/products/:id	Delete product by ID	✅
+GET	/api/products/search?q=term	Search products by name	❌
+GET	/api/products/stats	Get count of products by category	❌
+
+🔐 Authentication
+For POST, PUT, and DELETE requests, you must include the following header:
+
 
 x-api-key: mysecretkey
+📦 Example Requests & Responses
+✅ Create Product – POST /api/products
+Headers:
 
 
-
----
-
-### 📌 Example Endpoints to Test
-
-- **GET all products:**  
-  `GET http://localhost:3000/api/products`
-
-- **GET filtered + paginated:**  
-  `GET http://localhost:3000/api/products?category=electronics&page=1&limit=1`
-
-- **Search products:**  
-  `GET http://localhost:3000/api/products/search?q=laptop`
-
-- **Get stats:**  
-  `GET http://localhost:3000/api/products/stats`
-
-- **Create a product:**  
-  `POST http://localhost:3000/api/products`  
-  (Headers: `x-api-key`, Body in JSON)
-
-- **Update a product:**  
-  `PUT http://localhost:3000/api/products/:id`  
-  (Headers: `x-api-key`, Body in JSON)
-
-- **Delete a product:**  
-  `DELETE http://localhost:3000/api/products/:id`  
-  (Header: `x-api-key`)
-
----
-
-### 📚 Example Request & Response
-
-#### `POST /api/products`
-
-**Request Headers:**
-x-api-key: mysecretkey
 Content-Type: application/json
+x-api-key: mysecretkey
+Body:
 
 
-
-**Request Body:**
-```json
 {
   "name": "Blender",
   "description": "Powerful kitchen blender",
@@ -130,7 +87,7 @@ Response:
   "category": "kitchen",
   "inStock": true
 }
-GET /api/products/stats
+📊 Get Product Stats – GET /api/products/stats
 Response:
 
 
@@ -138,7 +95,7 @@ Response:
   "electronics": 2,
   "kitchen": 1
 }
-GET /api/products/search?q=laptop
+🔍 Search Products – GET /api/products/search?q=laptop
 Response:
 
 
@@ -152,20 +109,42 @@ Response:
     "inStock": true
   }
 ]
+📬 Example Endpoints to Test
+GET http://localhost:3000/api/products
 
-## Submission
+GET http://localhost:3000/api/products?category=electronics&page=1&limit=1
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+GET http://localhost:3000/api/products/search?q=laptop
 
-1. Complete all the required API endpoints
-2. Implement the middleware and error handling
-3. Document your API in the README.md
-4. Include examples of requests and responses
+GET http://localhost:3000/api/products/stats
 
-## Resources
+POST http://localhost:3000/api/products (with x-api-key header)
+
+PUT http://localhost:3000/api/products/:id (with x-api-key header)
+
+DELETE http://localhost:3000/api/products/:id (with x-api-key header)
+
+✅ Submission Checklist
+Before pushing your final submission to GitHub:
+
+ All API endpoints are implemented
+
+ Middleware (logger, authentication, validation) is working
+
+ Error handling is included
+
+ README includes instructions, endpoint docs, and examples
+
+ .env.example file is provided
+
+ Push your final changes:
+
+git add .
+git commit -m "Final submission - Express.js assignment"
+git push origin main
+📚 Resources
 
 - [Express.js Documentation](https://expressjs.com/)
 - [RESTful API Design Best Practices](https://restfulapi.net/)
 - [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) 
-
 
