@@ -154,9 +154,12 @@ Response:
 ]
 
 
-![ApiProducts](https://github.com/user-attachments/assets/468bbb63-1b60-4822-86b9-62ddb9d26d68)
 
 ## Submission
+
+
+![ApiProducts](https://github.com/user-attachments/assets/7a335192-4b28-44d5-9e95-24284ceaca08)
+
 
 Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
 
