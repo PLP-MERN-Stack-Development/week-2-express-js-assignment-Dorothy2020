@@ -154,7 +154,7 @@ Response:
 ]
 
 
-![ApiProducts](https://github.com/user-attachments/assets/656185e5-8175-484f-85a8-8f245667090e)
+![ApiProducts](https://github.com/user-attachments/assets/468bbb63-1b60-4822-86b9-62ddb9d26d68)
 
 ## Submission
 
