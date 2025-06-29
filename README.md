@@ -1,3 +1,6 @@
+
+![ApiProducts](https://github.com/user-attachments/assets/7a335192-4b28-44d5-9e95-24284ceaca08)
+
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19868115&assignment_repo_type=AssignmentRepo)
 # Express.js RESTful API Assignment
 
@@ -158,7 +161,6 @@ Response:
 ## Submission
 
 
-![ApiProducts](https://github.com/user-attachments/assets/7a335192-4b28-44d5-9e95-24284ceaca08)
 
 
 Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
